@@ -1,0 +1,27 @@
+server:
+  port: 9999
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    mode: LEGACYHTML5
+  datasource:
+    url: jdbc:mysql://localhost:3306/job?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: 5268413
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      min-idle: 10
+      max-idle: 50
+      max-wait: 10000
+      max-active: 100
+      initial-size: 20
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
+  type-aliases-package: java.util
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    com.eth.wallet.mapper: debug
+

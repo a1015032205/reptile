@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{'/layui/css/layui.css'}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<center>
+    <h1><b style="color: red">拉勾网-武汉市java招聘信息</b></h1>
+</center>
+<table id="demo" lay-filter="test"></table>
+</body>
+<script type="text/javascript" th:src="@{'/layui/layui.js'}"></script>
+<script type="text/javascript" th:src="@{'/my.js'}"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="detail">查看</a>
+</script>
+<script type="text/html" id="addDemo">
+    <button class="layui-btn  layui-btn-primary" lay-event="pie">
+        查看分析饼图
+    </button>
+</script>
+</html>

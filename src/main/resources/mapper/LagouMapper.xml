@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.java.dao.LagouMapper">
+    <select id="findAll" resultType="map">
+        select *
+        from lagou
+        limit #{start},#{rows}
+    </select>
+    <insert id="add">
+        insert into lagou
+        values (null, #{webId}, #{companyName}, #{region}, #{nature}, #{financing}, #{people}, #{workExp}, #{school},
+                #{money}, #{welfare}, #{ftime})
+    </insert>
+    <delete id="delById">
+        delete
+        from lagou
+        where id = #{id}
+    </delete>
+
+    <select id="findCount" resultType="int">
+        select count(*)
+        from lagou
+    </select>
+
+    <select id="findPie" resultType="map">
+        select money, people
+        from lagou
+    </select>
+</mapper>
